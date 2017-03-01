@@ -1,0 +1,3060 @@
+do run
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=213.652928, duration=0.000344038009644
+script duration name:unknown120_60 seconds:214.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=1.8835067749e-05
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=3.91006469727e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=7.20024108887e-05
+executed snippet estimated_duration=0.0, duration=0.00163888931274
+script duration name:co2 seconds:0.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000118017196655
+executed snippet estimated_duration=4.0, duration=0.000880002975464
+Script duration 214.0
+Run total estimated duration= 215.000
+run duration: 0:03:35
+doing event level: 2
+14:19:13 -- Setting default integration. t=1.048576
+setting integration time = 1.048576
+SetIntegrationTime 1.048576 ===>> OK
+----------------- start -----------------
+**************** Experiment Type: Ar/Ar, Ar/Ar
+close session 4419438256
+$$$$$ Clearing conditionals
+adding conditionals 
+Add queue conditionals
+add default conditionals
+adding default conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+Start automated run 65447-02B
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+%%%%%%%%%%%%%%%%%% setting automated run 65447-02B
+No value "sensitivity_multiplier" in metadata
+$$$$$$$$$$$$$$$ auto_save_detector_ic=False
+============================= Pre Extraction Check =============================
+loading queue conditionals pre_run_terminations
+loading system conditionals pre_run_terminations
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+14:19:14 -- ******* Pre Extraction Check *******
+Get a measurement from the spectrometer
+GetData ===>> H2,-0.204834398685291,H1,-0.106253697789005,AX,-0.0915794582846694,L1,-0.00726314561628475,L2,0.0...
+Pre Extraction Termination data. keys=H2,H1,AX,L1,L2,CDD, signals=-0.20483,-0.10625,-0.09158,-0.00726,0.04860,0.00402
+14:19:14 -- testing system defined conditionals
+Checking default pre extraction terminations n=2
+testing CDD
+evaluate ot="CDD.inactive" t="CDD", ctx="{'CDD': False}"
+GetDeflection CDD ===>> 50
+testing CDD==2000
+evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
+14:19:14 -- ******* Pre Extraction Check Passed *******
+=================================================================================
+14:19:14 -- stopping status monitor
+stop 5288834736
+Alive clients [5025639504, 4992986192]
+14:19:14 -- starting status monitor
+start 5288834736
+Monitor already running
+start extraction
+do extraction
+Analysis started at 14:19:14.048838
+Extraction Started jan_co2.py
+14:19:14 -- ******* Extraction Started jan_co2.py *******
+state changed from not run to extraction
+DO EXTRACTION <pychron.extraction_line.pyscript_runner.RemotePyScriptRunner object at 0x12bfe48f0>
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.00679016113e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=9.3936920166e-05
+executed snippet estimated_duration=100.0, duration=0.00285506248474
+Jan CO2 laser analysis
+doing GOSUB
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=4.41074371338e-05
+Waiting for CO2 access
+wait ('FelixCO2Flag', 0) {}
+waiting for FelixCO2Flag = 0
+Read FelixCO2Flag ===>> 0
+finished waiting
+CO2 free
+wait ('CO2PumpTimeFlag', 0) {}
+waiting for CO2PumpTimeFlag = 0
+Read CO2PumpTimeFlag ===>> 0
+finished waiting
+acquire ('JanCO2Flag',) {'clear': True}
+acquire JanCO2Flag
+Set JanCO2Flag 1 ===>> OK
+JanCO2Flag acquired
+set extraction state False (0.75, 'red', 1.5)
+CO2 acquired
+executed snippet estimated_duration=0, duration=0.0205261707306
+WaitForCO2Access.py completed successfully
+gosub finished
+doing GOSUB
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.00010085105896
+Prepare for CO2 analysis
+close () {'description': 'Jan Inlet'}
+closing name=--- desc=Jan Inlet
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+Close R ===>> OK
+GetIndicatorState R ===>> False
+change switch state (True, True)
+update switch state R False args=() kw={} ncanvase=6
+14:19:14 -- CLOSE  VALVE-R (Jan Inlet)
+---------------------------------------- close None (Jan Inlet) result=[(True, True)]
+action=close, ok=True, locked=[False]
+open () {'description': 'Jan Ion Pump'}
+opening name=--- desc=Jan Ion Pump
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open O ===>> OK
+GetIndicatorState O ===>> OK
+change switch state (True, True)
+update switch state O True args=() kw={} ncanvase=6
+14:19:14 -- OPEN   VALVE-O (Jan Ion Pump)
+---------------------------------------- open None (Jan Ion Pump) result=[(True, True)], time=0.09 sec
+action=open, ok=True, locked=[False]
+close () {'description': 'Microbone to Minibone'}
+closing name=--- desc=Microbone to Minibone
+checking ownership. requestor=129.138.12.150
+check software interlocks L
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+Close L ===>> OK
+GetIndicatorState L ===>> False
+change switch state (True, True)
+update switch state L False args=() kw={} ncanvase=6
+14:19:15 -- CLOSE  VALVE-L (Microbone to Minibone)
+---------------------------------------- close None (Microbone to Minibone) result=[(True, True)]
+action=close, ok=True, locked=[False]
+open () {'description': 'Microbone to Turbo'}
+opening name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open U ===>> OK
+GetIndicatorState U ===>> OK
+change switch state (True, True)
+update switch state U True args=() kw={} ncanvase=6
+14:19:15 -- OPEN   VALVE-U (Microbone to Turbo)
+---------------------------------------- open None (Microbone to Turbo) result=[(True, True)], time=0.14 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Inlet Pipette'}
+opening name=--- desc=Microbone to Inlet Pipette
+checking ownership. requestor=129.138.12.150
+check software interlocks S
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open S ===>> OK
+GetIndicatorState S ===>> OK
+change switch state (True, True)
+update switch state S True args=() kw={} ncanvase=6
+14:19:16 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+---------------------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)], time=0.42 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter D-50'}
+opening name=--- desc=Microbone to Getter D-50
+checking ownership. requestor=129.138.12.150
+check software interlocks K
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open K ===>> OK
+GetIndicatorState K ===>> OK
+change switch state (True, True)
+update switch state K True args=() kw={} ncanvase=6
+14:19:17 -- OPEN   VALVE-K (Microbone to Getter D-50)
+---------------------------------------- open None (Microbone to Getter D-50) result=[(True, True)], time=0.45 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter NP-10'}
+opening name=--- desc=Microbone to Getter NP-10
+checking ownership. requestor=129.138.12.150
+check software interlocks M
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open M ===>> OK
+GetIndicatorState M ===>> OK
+change switch state (True, True)
+update switch state M True args=() kw={} ncanvase=6
+14:19:17 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+---------------------------------------- open None (Microbone to Getter NP-10) result=[(True, True)], time=0.14 sec
+action=open, ok=True, locked=[False]
+close () {'description': 'CO2 Laser to Felix'}
+closing name=--- desc=CO2 Laser to Felix
+checking ownership. requestor=129.138.12.150
+check software interlocks F
+interlocks []
+actuate state mode=None-script, software_lock=True
+VALVE-F(CO2 Laser to Felix) software locked
+change switch state (True, False)
+---------------------------------------- close None (CO2 Laser to Felix) result=[(True, False)]
+action=close, ok=True, locked=[True]
+open () {'description': 'CO2 Laser to Jan'}
+opening name=--- desc=CO2 Laser to Jan
+checking ownership. requestor=129.138.12.150
+check software interlocks A
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open A ===>> OK
+GetIndicatorState A ===>> OK
+change switch state (True, True)
+update switch state A True args=() kw={} ncanvase=6
+14:19:18 -- OPEN   VALVE-A (CO2 Laser to Jan)
+---------------------------------------- open None (CO2 Laser to Jan) result=[(True, True)], time=0.14 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to CO2 Laser'}
+opening name=--- desc=Microbone to CO2 Laser
+checking ownership. requestor=129.138.12.150
+check software interlocks T
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open T ===>> OK
+GetIndicatorState T ===>> OK
+change switch state (True, True)
+update switch state T True args=() kw={} ncanvase=6
+14:19:18 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+---------------------------------------- open None (Microbone to CO2 Laser) result=[(True, True)], time=0.42 sec
+action=open, ok=True, locked=[False]
+executed snippet estimated_duration=0, duration=4.94483017921
+PrepareForCO2Analysis.py completed successfully
+gosub finished
+set_motor ('beam', '1.25') {}
+setting motor "beam" to 1.25
+set motor beam to 1.25
+SetMotor beam,1.25 ===>> OK
+GetMotorMoving beam ===>> False
+GetMotorMoving beam ===>> False
+Block completed
+move_to_position ('129',) {'autocenter': True}
+FusionsCO2 move to position 129
+sending GoToHole 129,True
+GoToHole 129,True ===>> OK
+GetDriveMoving ===>> False
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> False
+Block completed
+GetAutoCorrecting ===>> False
+GetAutoCorrecting ===>> False
+Block completed
+update position
+GetPosition ===>> 1.99390,-1.99390,1.00000
+got position (1.9939, -1.9939, 1.0)
+move to position succeeded
+sleep (5,) {}
+SLEEP 5.0
+block started
+WaitControl setup for 5.0  
+Join finished
+block finished. duration 5.0236890316
+close () {'description': 'Microbone to Turbo'}
+closing name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+Close U ===>> OK
+GetIndicatorState U ===>> False
+change switch state (True, True)
+update switch state U False args=() kw={} ncanvase=6
+14:19:28 -- CLOSE  VALVE-U (Microbone to Turbo)
+---------------------------------------- close None (Microbone to Turbo) result=[(True, True)]
+action=close, ok=True, locked=[False]
+enable laser
+enable () {}
+set extraction state FusionsCO2 Enabled (False, 'red', 1.5)
+enabling laser
+Enable ===>> OK
+begin interval
+BEGIN INTERVAL Interval 1 waiting for 30.0
+block started
+set extract to 0.4
+WaitControl setup for 30.0  
+extract (0.4,) {}
+GetPosition ===>> 1.99390,-1.99390,1.00000
+set extraction state FusionsCO2 ON! 0.4(watts) (0.75, 'red', 1.5)
+extract sample to 0.4 (watts)
+set laser output
+SetLaserOutput 0.4,watts ===>> OK
+executing pattern triangle.lp
+execute_pattern ('triangle.lp',) {}
+executing pattern triangle.lp
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> OK
+IsPatterning ===>> False
+IsPatterning ===>> False
+Block completed
+COMPLETE INTERVAL waiting for Interval 1 to complete
+Join finished
+block finished. duration 30.0490581989
+Interval 1 finished
+end_extract () {}
+ending extraction. set laser power to 0
+set laser power 0
+SetLaserPower 0 ===>> OK
+disable () {}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% disable
+set extraction state False (0.75, 'red', 1.5)
+disabling laser
+Disable ===>> OK
+sleep (30.0,) {}
+SLEEP 30.0
+block started
+WaitControl setup for 30.0  
+Join finished
+block finished. duration 30.0453510284
+executed snippet estimated_duration=166.0, duration=75.719771862
+jan_co2.py completed successfully
+GetAchievedOutput ===>> No Response
+Requested Output= 0.000
+Achieved Output=  0.000
+GetResponseBlob ===>> No Response
+GetOutputBlob ===>> No Response
+persistence save...
+persistence save - db
+AutomatedRunPersister post_extraction_save deprecated
+persistence save - dvc
+no extraction position for 129
+create new session 4992585168
+close session 4992585168
+Extraction Finished
+14:20:29 -- ******* Extraction Finished *******
+no overlap. not waiting for min ms pumptime
+14:20:29 -- Sending spectrometer configuration
+======== Sending configuration ========
+SetDeflection CDD,50.0 ===>> OK
+SetDeflection H2,0.0 ===>> OK
+SetDeflection H1,0.0 ===>> OK
+SetDeflection L2,825.0 ===>> OK
+SetDeflection L1,400.0 ===>> OK
+SetDeflection AX,190.0 ===>> OK
+SetZFocus 74.64 ===>> OK
+SetZSymmetry -50.72 ===>> OK
+SetExtractionLens 26.13 ===>> OK
+SetIonRepeller -3.81 ===>> OK
+SetElectronEnergy 75.08 ===>> OK
+SetYSymmetry -2.81 ===>> OK
+SetIonCounterVoltage 1590.0 ===>> OK
+send trap current 200.0
+GetParameter Trap Current Readback ===>> 198.370811206739
+SetParameter Trap Current Set,200.0 ===>> OK
+updating mftable name mftable
+Using mftable located at /Users/jan/PychronDev/setupfiles/spectrometer/mftables/mftable.csv
+============ MFtable ===========
+Isotope  H2     H1     AX     L1     L2     CDD    
+Ar40     5.8227 5.8809 5.9941 6.1626 6.2326 6.3909
+Ar39     5.7220 5.7732 5.8865 6.0487 6.1177 6.2774
+Ar36     5.3995 5.4422 5.5499 5.7076 5.7727 5.9285
+================================
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+======== Configuration Finished ========
+GetYSymmetry ===>> -2.81
+GetZSymmetry ===>> -50.72
+GetParameter Trap Current Readback ===>> 198.258926936459
+GetHighVoltage ===>> 4499.94659342336
+start measurement
+do measurement
+L#=65447 analysis type=unknown
+Measurement Started jan_unknown120_60.py
+14:20:30 -- ******* Measurement Started jan_unknown120_60.py *******
+state changed from extraction to measurement
+setting spec, defl, and gains
+GetExtractionLens ===>> 26.13
+GetYSymmetry ===>> -2.81
+GetZSymmetry ===>> -50.72
+GetZFocus ===>> 74.64
+GetDeflection H2 ===>> 0
+GetDeflection H1 ===>> 0
+GetDeflection AX ===>> 190
+GetDeflection L1 ===>> 400
+GetDeflection L2 ===>> 825
+GetDeflection CDD ===>> 50
+GetGain H2 ===>> 0.0113
+GetGain H1 ===>> 0.1
+GetGain AX ===>> 0.097049
+GetGain L1 ===>> 0.010355
+GetGain L2 ===>> 0.095649
+GetGain CDD ===>> 0
+pre measurement save
+New frame /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+flush and close file /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+testing...
+no interpolation path defined
+executed snippet estimated_duration=226.132928, duration=0.000153064727783
+unknown measurement script
+activate_detectors ('H2', 'H1', 'AX', 'L1', 'L2', 'CDD') {}
+activate detectors
+*************** Set Analysis View Ar/Ar
+create graphs
+clearing graphs
+clear isotope group
+setting isotope det=H2, iso=PM41
+setting isotope det=H1, iso=Ar40
+setting isotope det=AX, iso=Ar39
+setting isotope det=L1, iso=Ar38
+setting isotope det=L2, iso=Ar37
+setting isotope det=CDD, iso=Ar36
+setting previous blanks
+ - setting Ar40 blank 0.560+/-0.008
+ - setting Ar36 blank 0.00482+/-0.00017
+ - setting Ar37 blank 0.062+/-0.005
+ - setting Ar38 blank 0.0071+/-0.0024
+ - setting PM41 blank 0.02+/-0.07
+ - setting Ar39 blank 0.009+/-0.009
+load analysis view
+position_magnet ('Ar40',) {'detector': 'H1'}
+detector Detector(H1)
+POSITION Ar40 H1
+setting detector H2 to PM41 (40.9624)
+setting detector H1 to Ar40 (39.9624)
+setting detector AX to Ar39 (38.9624)
+setting detector L1 to Ar38 (37.9624)
+setting detector L2 to Ar37 (36.9624)
+setting detector CDD to Ar36 (35.9624)
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [-0.00063987  0.15840543  0.57252999]
+H1 map mass to dac 39.9624 >> 5.88092
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+positioning Ar40 (5.88088536781) on H1
+setting magnet DAC
+current  : 5.880886
+requested: 5.880885
+Delta Dac: 0.000001
+Checking detector protection. dv=0.00000
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88088536781 ===>> OK
+Magnet settling time: 0.500
+equilibrate () {'delay': 3, 'inlet': 'R', 'outlet': 'O', 'eqtime': 12.0}
+Equilibration Started
+14:20:31 -- ******* Equilibration Started *******
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+Close O ===>> OK
+update labels <pychron.experiment.plot_panel.PlotPanel object at 0x19c49db30>
+update labels "<pychron.graph.stacked_regression_graph.StackedRegressionGraph object at 0x19aea0cb0>"
+setting label 0 H2 PM41
+setting label 1 H1 Ar40
+setting label 2 AX Ar39
+setting label 3 L1 Ar38
+setting label 4 L2 Ar37
+setting label 5 CDD Ar36
+update labels "<pychron.graph.stacked_graph.StackedGraph object at 0x19aea0ad0>"
+setting label 0 H2 PM41
+setting label 1 H1 Ar40
+setting label 2 AX Ar39
+setting label 3 L1 Ar38
+setting label 4 L2 Ar37
+setting label 5 CDD Ar36
+GetIndicatorState O ===>> False
+change switch state (True, True)
+update switch state O False args=() kw={} ncanvase=6
+14:20:31 -- CLOSE  VALVE-O (Jan Ion Pump)
+waiting 3s before opening inlet value ('R',)
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+Open R ===>> OK
+set states for children of R. state=True
+handle state [('R', True)]
+update switch state R True args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
+GetIndicatorState R ===>> OK
+change switch state (True, True)
+update switch state R True args=() kw={} ncanvase=6
+14:20:35 -- OPEN   VALVE-R (Jan Inlet)
+set_time_zero () {}
+equilibrating for 12.0sec
+sniff (12.0,) {}
+py_sniff
+build tables- sniff [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group /sniff/PM41 (Group) '' table H2
+add group /sniff/Ar40 (Group) '' table H1
+add group /sniff/Ar39 (Group) '' table AX
+add group /sniff/Ar38 (Group) '' table L1
+add group /sniff/Ar37 (Group) '' table L2
+add group /sniff/Ar36 (Group) '' table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+measuring sniff. ncounts=12.0
+"sniff" increment series count="1" fit count="0" regressing="False"
+starting measurement
+check iteration duration=4.60147857666e-05
+GetData ===>> H2,0.15203935506894,H1,1.08979869590515,AX,1.09670658107028,L1,0.0200182739273985,L2,1.9796370809...
+check iteration duration=1.8835067749e-05
+GetData ===>> H2,0.83306784404411,H1,5.28618814841015,AX,3.82497861518269,L1,0.207069560709817,L2,8.71631431531...
+check iteration duration=3.91006469727e-05
+GetData ===>> H2,0.444724774197793,H1,7.19759386385246,AX,4.26522168854692,L1,0.177762139012084,L2,10.421569818...
+check iteration duration=3.81469726562e-05
+GetData ===>> H2,0.161825295311364,H1,7.71234141264621,AX,4.23377409653045,L1,0.107621466540424,L2,10.967620743...
+check iteration duration=1.69277191162e-05
+GetData ===>> H2,0.0929522778969707,H1,7.97847586832929,AX,4.41463483928298,L1,0.0895925516909262,L2,11.1469060...
+check iteration duration=7.60555267334e-05
+GetData ===>> H2,0.0557517679291467,H1,8.04420351508634,AX,4.21047633822543,L1,0.114707559786464,L2,11.17743040...
+check iteration duration=4.10079956055e-05
+GetData ===>> H2,-0.00176373262005989,H1,8.08482425670205,AX,4.25358029756108,L1,0.0673126352004294,L2,11.11649...
+check iteration duration=1.69277191162e-05
+GetData ===>> H2,-0.0395585035236017,H1,8.16246203935116,AX,4.36245461750522,L1,0.0605054631428865,L2,11.155012...
+check iteration duration=1.50203704834e-05
+GetData ===>> H2,-0.142049996997432,H1,8.24000865798389,AX,4.39486243192706,L1,0.0413996996407162,L2,11.1542045...
+check iteration duration=4.50611114502e-05
+GetData ===>> H2,-0.0920230712727483,H1,8.25747547364537,AX,4.41988995485177,L1,0.0677892230089748,L2,11.162191...
+check iteration duration=4.31537628174e-05
+GetData ===>> H2,-0.0635741015254239,H1,8.19419391944882,AX,4.43043661068037,L1,0.058025854789369,L2,11.1746550...
+check iteration duration=3.00407409668e-05
+Equilibration Finished
+GetData ===>> H2,-0.181237002449952,H1,8.17882335908975,AX,4.46453996994575,L1,0.0702579706496652,L2,11.2174728...
+14:20:47 -- ******* Equilibration Finished *******
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+Close R ===>> OK
+GetIndicatorState R ===>> False
+change switch state (True, True)
+update switch state R False args=() kw={} ncanvase=6
+14:20:48 -- CLOSE  VALVE-R (Jan Inlet)
+Post Equilibration Started jan_pump_extraction_line.py
+14:20:48 -- ******* Post Equilibration Started jan_pump_extraction_line.py *******
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000182151794434
+executed snippet estimated_duration=4.0, duration=0.00173091888428
+Pump after analysis
+doing GOSUB
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000174045562744
+Pump Microbone
+close () {'description': 'Jan Inlet'}
+closing name=--- desc=Jan Inlet
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+Close R ===>> OK
+GetIndicatorState R ===>> False
+change switch state (True, True)
+update switch state R False args=() kw={} ncanvase=6
+14:20:48 -- CLOSE  VALVE-R (Jan Inlet)
+---------------------------------------- close None (Jan Inlet) result=[(True, True)]
+check iteration duration=1.4066696167e-05
+waiting for write to finish
+measurement finished
+estimated time: 12.583 actual time: :12.707
+flush and close file /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+set_fits () {}
+using default fits file=/Users/jan/PychronDev/scripts/measurement/fits/nominal_linear.yaml
+set "Ar40" to "('Linear', 'SEM')"
+No fit for "PM41". defaulting to linear. check the measurement script "jan_unknown120_60.py"
+set "PM41" to "linear"
+set "Ar36" to "('Linear', 'SEM')"
+set "Ar37" to "('linear', 'SEM')"
+set "Ar38" to "('linear', 'SEM')"
+set "Ar39" to "('Linear', 'SEM')"
+set_baseline_fits () {}
+using default fits file=/Users/jan/PychronDev/scripts/measurement/fits/nominal_linear.yaml
+action=close, ok=True, locked=[False]
+is_closed ('F',) {}
+set "H1" to "('average', 'SEM')"
+is F () closed?
+set "H2" to "('average', 'SEM')"
+set "CDD" to "('average', 'SEM')"
+is closed True
+set "L2" to "('average', 'SEM')"
+open () {'description': 'CO2 Laser to Jan'}
+set "L1" to "('average', 'SEM')"
+opening name=--- desc=CO2 Laser to Jan
+set "AX" to "('average', 'SEM')"
+multicollect () {'integration_time': 1, 'ncounts': 120}
+build tables- signal [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+checking ownership. requestor=129.138.12.150
+add group /signal/PM41 (Group) '' table H2
+check software interlocks A
+add group /signal/Ar40 (Group) '' table H1
+interlocks []
+add group /signal/Ar39 (Group) '' table AX
+actuate state mode=None-script, software_lock=False
+add group /signal/Ar38 (Group) '' table L1
+doing actuation None-script open_channel False
+add group /signal/Ar37 (Group) '' table L2
+add group /signal/Ar36 (Group) '' table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+measuring signal. ncounts=120
+Open A ===>> OK
+GetIndicatorState A ===>> OK
+change switch state (True, True)
+update switch state A True args=() kw={} ncanvase=6
+14:20:48 -- OPEN   VALVE-A (CO2 Laser to Jan)
+---------------------------------------- open None (CO2 Laser to Jan) result=[(True, True)], time=0.16 sec
+action=open, ok=True, locked=[False]
+sleep (1,) {}
+SLEEP 1.0
+"signal" increment series count="2" fit count="1" regressing="True"
+starting measurement
+check iteration duration=6.38961791992e-05
+GetData ===>> H2,-0.159639759607512,H1,8.17859989432128,AX,4.44932610275325,L1,0.068445169758139,L2,11.20197720...
+close () {'description': 'CO2 Laser to Roughing'}
+closing name=--- desc=CO2 Laser to Roughing
+checking ownership. requestor=129.138.12.150
+check software interlocks G
+interlocks []
+actuate state mode=None-script, software_lock=True
+VALVE-G(CO2 Laser to Roughing) software locked
+change switch state (True, False)
+---------------------------------------- close None (CO2 Laser to Roughing) result=[(True, False)]
+action=close, ok=True, locked=[True]
+open () {'description': 'Microbone to Turbo'}
+opening name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+Open U ===>> OK
+GetIndicatorState U ===>> OK
+change switch state (True, True)
+update switch state U True args=() kw={} ncanvase=6
+14:20:50 -- OPEN   VALVE-U (Microbone to Turbo)
+---------------------------------------- open None (Microbone to Turbo) result=[(True, True)], time=0.18 sec
+check iteration duration=3.48091125488e-05
+GetData ===>> H2,-0.108996666480078,H1,8.26609815310582,AX,4.29941874322005,L1,0.062327039034207,L2,11.27039690...
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter NP-10'}
+opening name=--- desc=Microbone to Getter NP-10
+checking ownership. requestor=129.138.12.150
+check software interlocks M
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open M ===>> OK
+GetIndicatorState M ===>> OK
+change switch state (True, True)
+update switch state M True args=() kw={} ncanvase=6
+14:20:50 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+---------------------------------------- open None (Microbone to Getter NP-10) result=[(True, True)], time=0.16 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter D-50'}
+opening name=--- desc=Microbone to Getter D-50
+checking ownership. requestor=129.138.12.150
+check software interlocks K
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open K ===>> OK
+GetIndicatorState K ===>> OK
+change switch state (True, True)
+update switch state K True args=() kw={} ncanvase=6
+14:20:51 -- OPEN   VALVE-K (Microbone to Getter D-50)
+---------------------------------------- open None (Microbone to Getter D-50) result=[(True, True)], time=0.41 sec
+check iteration duration=6.79492950439e-05
+GetData ===>> H2,-0.0613764510384361,H1,8.28138332352604,AX,4.23188969042946,L1,0.0869142920211283,L2,11.188230...
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to CO2 Laser'}
+opening name=--- desc=Microbone to CO2 Laser
+checking ownership. requestor=129.138.12.150
+check software interlocks T
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open T ===>> OK
+GetIndicatorState T ===>> OK
+change switch state (True, True)
+update switch state T True args=() kw={} ncanvase=6
+14:20:52 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+---------------------------------------- open None (Microbone to CO2 Laser) result=[(True, True)], time=0.43 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Inlet Pipette'}
+opening name=--- desc=Microbone to Inlet Pipette
+checking ownership. requestor=129.138.12.150
+check software interlocks S
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+check iteration duration=3.81469726562e-05
+GetData ===>> H2,-0.123542776663085,H1,8.31186804667594,AX,4.33885205456722,L1,0.0757814343450745,L2,11.2990721...
+Open S ===>> OK
+GetIndicatorState S ===>> OK
+change switch state (True, True)
+update switch state S True args=() kw={} ncanvase=6
+14:20:52 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+---------------------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)], time=0.43 sec
+action=open, ok=True, locked=[False]
+sleep (1,) {}
+SLEEP 1.0
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000757932662964
+GetData ===>> H2,-0.0800779635834891,H1,8.26973877804764,AX,4.31407005452926,L1,0.0308319419630307,L2,11.069610...
+set_resource () {'name': 'CO2PumpTimeFlag', 'value': 30}
+Set CO2PumpTimeFlag 30 ===>> OK
+release ('JanCO2Flag',) {}
+release JanCO2Flag
+Set JanCO2Flag 0 ===>> OK
+executed snippet estimated_duration=6.0, duration=6.03457903862
+PumpMicrobone.py completed successfully
+gosub finished
+get_resource_value () {'name': 'JanMiniboneFlag'}
+Read JanMiniboneFlag ===>> 0
+Get Resource Value JanMiniboneFlag=0.0
+get resource value 0.0
+get_resource_value () {'name': 'JanMiniboneFlag'}
+Read JanMiniboneFlag ===>> 0
+Get Resource Value JanMiniboneFlag=0.0
+executed snippet estimated_duration=4.0, duration=6.04935097694
+jan_pump_extraction_line.py completed successfully
+Post Equilibration Finished
+14:20:54 -- ******* Post Equilibration Finished *******
+check iteration duration=4.91142272949e-05
+GetData ===>> H2,-0.138049178296113,H1,8.32692122581047,AX,4.35691800401984,L1,0.0285241600069957,L2,11.0716238...
+check iteration duration=5.98430633545e-05
+GetData ===>> H2,-0.122571775571038,H1,8.30071618518968,AX,4.27330744818109,L1,0.0341690081501683,L2,11.0993281...
+check iteration duration=6.38961791992e-05
+GetData ===>> H2,-0.14740969283691,H1,8.38557731546052,AX,4.34706667616115,L1,0.0582978597637392,L2,11.08561974...
+check iteration duration=6.103515625e-05
+GetData ===>> H2,-0.184484271171342,H1,8.44914104474526,AX,4.30687867780198,L1,0.0684957215501164,L2,11.0057866...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00085186958313
+GetData ===>> H2,-0.164248342352088,H1,8.46714220225067,AX,4.26552993126277,L1,0.0702399132603666,L2,11.1482450...
+check iteration duration=6.19888305664e-05
+GetData ===>> H2,-0.0473467749274554,H1,8.40506624051043,AX,4.24702520551002,L1,0.0434698288292026,L2,11.257811...
+check iteration duration=5.10215759277e-05
+GetData ===>> H2,-0.157419193178125,H1,8.46348024912069,AX,4.27768256868627,L1,0.05211095710965,L2,11.223382762...
+check iteration duration=5.00679016113e-05
+GetData ===>> H2,-0.185656404862728,H1,8.46708007045372,AX,4.36020199669399,L1,0.0570510298819519,L2,11.1308151...
+check iteration duration=8.10623168945e-05
+GetData ===>> H2,-0.216856754809054,H1,8.4485441388104,AX,4.19840299429459,L1,0.0345632321979754,L2,11.10916753...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000648021697998
+GetData ===>> H2,-0.166772613587654,H1,8.39844108893535,AX,4.23966457727971,L1,0.0196758895275432,L2,11.1543372...
+check iteration duration=7.20024108887e-05
+GetData ===>> H2,-0.193411818646815,H1,8.45634149166041,AX,4.11414360845657,L1,0.0304907269807811,L2,11.1491498...
+check iteration duration=3.981590271e-05
+GetData ===>> H2,-0.210128504468312,H1,8.45784631105111,AX,4.3080765890522,L1,-0.00601700141470667,L2,11.101884...
+check iteration duration=8.41617584229e-05
+GetData ===>> H2,-0.216898490862719,H1,8.50145703278351,AX,4.29599139324196,L1,0.00684426425288021,L2,11.116897...
+check iteration duration=8.70227813721e-05
+GetData ===>> H2,-0.213545652376276,H1,8.55420032932404,AX,4.22972088986558,L1,0.0426181496008904,L2,11.1710593...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00105500221252
+GetData ===>> H2,-0.155106316001825,H1,8.62115630066886,AX,4.21945824556318,L1,0.0510140258557664,L2,11.1991287...
+check iteration duration=4.79221343994e-05
+GetData ===>> H2,-0.130257720498932,H1,8.61041706543657,AX,4.26925263025634,L1,0.0714173225786012,L2,10.9951044...
+check iteration duration=8.70227813721e-05
+GetData ===>> H2,-0.1226515684866,H1,8.58178865098191,AX,4.26283876747867,L1,0.046815035378545,L2,11.0581120709...
+check iteration duration=6.38961791992e-05
+GetData ===>> H2,0.00124957656291092,H1,8.61335375699566,AX,4.41289110376755,L1,0.0690722705917701,L2,11.087150...
+check iteration duration=6.29425048828e-05
+GetData ===>> H2,-0.0301615552133432,H1,8.69883297313689,AX,4.25227635694683,L1,0.0613927330345614,L2,11.176163...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000668048858643
+14:21:14 -- collecting point 25
+GetData ===>> H2,-0.206585002126822,H1,8.65084116106762,AX,4.26773508008803,L1,0.0357964837275502,L2,11.0653077...
+check iteration duration=7.82012939453e-05
+GetData ===>> H2,-0.162000322679254,H1,8.59646890848367,AX,4.23832526228135,L1,-0.0194410142455515,L2,11.009078...
+check iteration duration=3.2901763916e-05
+GetData ===>> H2,-0.242219970354068,H1,8.64199082919035,AX,4.2333237320771,L1,0.0202837800114694,L2,10.90093137...
+check iteration duration=9.01222229004e-05
+GetData ===>> H2,-0.318651660973593,H1,8.65902420816156,AX,4.30813589196403,L1,0.0431257802618993,L2,11.0559546...
+check iteration duration=7.48634338379e-05
+GetData ===>> H2,-0.335352426006765,H1,8.7015579403112,AX,4.3521641127473,L1,0.0327617058993992,L2,11.034491812...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000571966171265
+GetData ===>> H2,-0.238953067944813,H1,8.66902473316078,AX,4.40311726061079,L1,-0.0237026265323977,L2,11.090623...
+check iteration duration=4.00543212891e-05
+GetData ===>> H2,-0.195752249211669,H1,8.67239577269239,AX,4.31044393804533,L1,0.0389836826901085,L2,11.0438428...
+check iteration duration=7.9870223999e-05
+GetData ===>> H2,-0.212834561240681,H1,8.67247040948518,AX,4.27353272068985,L1,0.018698055665642,L2,11.12454347...
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.18833877197221,H1,8.80295483648286,AX,4.25117394776268,L1,0.0480846489640938,L2,11.09100885...
+check iteration duration=8.79764556885e-05
+GetData ===>> H2,-0.140809353501661,H1,8.73977718412424,AX,4.32645435715971,L1,0.0841126763714448,L2,11.0439272...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00058913230896
+GetData ===>> H2,-0.196575012568425,H1,8.88167556711108,AX,4.25342619459778,L1,0.059101881898588,L2,11.07660238...
+check iteration duration=8.70227813721e-05
+GetData ===>> H2,-0.159145437574165,H1,8.74593887247002,AX,4.26347894962042,L1,0.0292701369104088,L2,11.0095846...
+check iteration duration=8.08238983154e-05
+GetData ===>> H2,-0.339915226996278,H1,8.83276394275419,AX,4.27775371044691,L1,0.0116518083575947,L2,11.0331663...
+check iteration duration=7.39097595215e-05
+GetData ===>> H2,-0.312200115264419,H1,8.91597686213685,AX,4.33774971106742,L1,0.0196038100831099,L2,11.0498202...
+check iteration duration=8.20159912109e-05
+GetData ===>> H2,-0.150656433511655,H1,8.84486191428164,AX,4.28282862063422,L1,0.0273758718540494,L2,11.0068838...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00107407569885
+GetData ===>> H2,-0.155442739266824,H1,8.90415571874013,AX,4.27719643468337,L1,0.00872452568896936,L2,10.970007...
+check iteration duration=4.6968460083e-05
+GetData ===>> H2,-0.190652460371629,H1,8.97136344882965,AX,4.3009367767865,L1,0.0548165086203542,L2,10.97032057...
+check iteration duration=9.17911529541e-05
+GetData ===>> H2,-0.140670144293347,H1,8.942464064512,AX,4.29117669963343,L1,0.0745685906013399,L2,10.933119920...
+check iteration duration=7.79628753662e-05
+GetData ===>> H2,-0.130757572376381,H1,8.96902029482918,AX,4.3940085232032,L1,0.0374362445779095,L2,10.92024086...
+check iteration duration=5.10215759277e-05
+GetData ===>> H2,-0.164089037922994,H1,9.06274725847396,AX,4.29880204869977,L1,0.0188650254936425,L2,10.9441569...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00101900100708
+GetData ===>> H2,-0.202528147953499,H1,8.94795919279281,AX,4.22489755215596,L1,0.0452462732689033,L2,10.9189638...
+check iteration duration=6.31809234619e-05
+GetData ===>> H2,-0.215200651549285,H1,9.00522040446983,AX,4.26607528609976,L1,0.031253670796837,L2,11.04452974...
+check iteration duration=7.48634338379e-05
+GetData ===>> H2,-0.135166633096067,H1,9.02901159556915,AX,4.25113838637951,L1,0.0540465135360846,L2,10.8976432...
+check iteration duration=6.00814819336e-05
+GetData ===>> H2,-0.141248594657571,H1,8.92985502041819,AX,4.24598212039596,L1,0.0357928775091452,L2,11.0227524...
+check iteration duration=4.79221343994e-05
+GetData ===>> H2,-0.238121605141947,H1,8.97739606557722,AX,4.27717272089027,L1,-0.0047575074278575,L2,10.910133...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00102281570435
+14:21:40 -- collecting point 50
+GetData ===>> H2,-0.240427127328192,H1,8.97441710596734,AX,4.34166130773173,L1,-0.00157088388111316,L2,10.99516...
+check iteration duration=5.69820404053e-05
+GetData ===>> H2,-0.241174179847914,H1,9.02484649950692,AX,4.34020333100037,L1,0.044034045749619,L2,11.18603437...
+check iteration duration=3.79085540771e-05
+GetData ===>> H2,-0.115987604207218,H1,8.95382845823114,AX,4.25636604614206,L1,0.0163535628576451,L2,10.9487360...
+check iteration duration=3.19480895996e-05
+GetData ===>> H2,-0.183255356284804,H1,8.97541423781198,AX,4.23251782182935,L1,0.0176938925931239,L2,10.9973830...
+check iteration duration=5.48362731934e-05
+GetData ===>> H2,-0.191639274464705,H1,9.01130484823833,AX,4.21089105223084,L1,0.0242768256354275,L2,10.9090618...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000586986541748
+GetData ===>> H2,-0.212518057432339,H1,9.07529851034299,AX,4.21212335548018,L1,0.0347819851146906,L2,10.8480930...
+check iteration duration=6.29425048828e-05
+GetData ===>> H2,-0.0967448661845224,H1,9.06263508922727,AX,4.271671273689,L1,0.0467970022449023,L2,10.90607459...
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.103504480463129,H1,9.16846412536081,AX,4.35187959777874,L1,0.0685318301278004,L2,11.0587870...
+check iteration duration=3.88622283936e-05
+GetData ===>> H2,-0.198843371482096,H1,9.14017271636689,AX,4.22040625144945,L1,0.0960049425920875,L2,11.0208471...
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.255384335636512,H1,9.15303263383349,AX,4.19423275879172,L1,0.0757982971507537,L2,10.8136336...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000927209854126
+GetData ===>> H2,-0.263730385683822,H1,9.14215585957254,AX,4.27567876332534,L1,0.0618430192100721,L2,10.9713571...
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.181450187830871,H1,9.14356528607521,AX,4.31959243350896,L1,0.0488205208437998,L2,10.9660780...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.216361295690461,H1,9.15991851551807,AX,4.28971810691706,L1,0.0350043487104718,L2,10.9444582...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.16919241620372,H1,9.2372915222622,AX,4.32423810555586,L1,0.0323050658932016,L2,10.862564264...
+check iteration duration=8.60691070557e-05
+GetData ===>> H2,-0.186152737903411,H1,9.18920104515826,AX,4.33364862634902,L1,0.0498618952682514,L2,10.9568342...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000745058059692
+GetData ===>> H2,-0.196013921422903,H1,9.18301197963307,AX,4.30588240616362,L1,0.0518150625989635,L2,11.0365884...
+check iteration duration=3.91006469727e-05
+GetData ===>> H2,-0.169768612020898,H1,9.19233315121162,AX,4.14285369994243,L1,0.0560919421495489,L2,10.9676689...
+check iteration duration=3.09944152832e-05
+GetData ===>> H2,-0.16604643702629,H1,9.25678816168911,AX,4.1701151684223,L1,0.00618559580584437,L2,10.84902003...
+check iteration duration=3.91006469727e-05
+GetData ===>> H2,-0.164145739756169,H1,9.34195230322763,AX,4.25865397460387,L1,-0.00456796993118648,L2,10.92503...
+check iteration duration=3.79085540771e-05
+GetData ===>> H2,-0.234232319538468,H1,9.2884046309518,AX,4.22013369883162,L1,0.00749817625883386,L2,10.9044846...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000705003738403
+GetData ===>> H2,-0.189383765568937,H1,9.2964537566423,AX,4.25631862849223,L1,0.0294767618500241,L2,10.88922461...
+check iteration duration=6.60419464111e-05
+GetData ===>> H2,-0.303167642013135,H1,9.28348810498576,AX,4.34205247585502,L1,0.0542269758658172,L2,10.8450233...
+check iteration duration=8.48770141602e-05
+GetData ===>> H2,-0.235312736247489,H1,9.30154561600085,AX,4.32116861935591,L1,0.0531562799108644,L2,10.9526404...
+check iteration duration=8.39233398438e-05
+GetData ===>> H2,-0.268236557315142,H1,9.33800706523458,AX,4.30565706039075,L1,0.0388237577319285,L2,10.8461789...
+check iteration duration=6.38961791992e-05
+GetData ===>> H2,-0.294487129018861,H1,9.3709593574286,AX,4.17384614199505,L1,0.0200579191881117,L2,10.96237798...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00058388710022
+14:22:07 -- collecting point 75
+GetData ===>> H2,-0.26692871618487,H1,9.33307572665252,AX,4.20253786068454,L1,0.0216318418617726,L2,10.86347931...
+check iteration duration=3.2901763916e-05
+GetData ===>> H2,-0.236261211184813,H1,9.4087192649772,AX,4.26721342756458,L1,0.0476914845065451,L2,10.85010350...
+check iteration duration=7.91549682617e-05
+GetData ===>> H2,-0.234829723368368,H1,9.41963564296062,AX,4.28836625959193,L1,0.0492498042143724,L2,10.8283538...
+check iteration duration=3.81469726562e-05
+GetData ===>> H2,-0.17289197387006,H1,9.44626540490587,AX,4.20240753275873,L1,0.0779979299450331,L2,10.86952369...
+check iteration duration=8.39233398438e-05
+GetData ===>> H2,-0.112552633710269,H1,9.42541546179199,AX,4.28247289419304,L1,0.0579969697356574,L2,10.7706295...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000746965408325
+GetData ===>> H2,-0.113785715477561,H1,9.37194596323721,AX,4.2136400573656,L1,0.0123516496891052,L2,10.86021646...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.2399129111129,H1,9.45598014796116,AX,4.32712990890898,L1,0.0209205425558204,L2,10.925047728...
+check iteration duration=3.50475311279e-05
+GetData ===>> H2,-0.193910507268361,H1,9.34011699998469,AX,4.31712747111391,L1,0.0300173703821485,L2,10.8774951...
+check iteration duration=3.71932983398e-05
+GetData ===>> H2,-0.258434146559047,H1,9.49122550045465,AX,4.28833068491035,L1,0.070301308515631,L2,10.85113883...
+check iteration duration=4.41074371338e-05
+GetData ===>> H2,-0.215056572559015,H1,9.49639714781927,AX,4.16761608664468,L1,0.0825938880658792,L2,10.8637201...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000736951828003
+GetData ===>> H2,-0.178839065079742,H1,9.50997705939669,AX,4.32593288175311,L1,0.0329575867642493,L2,10.7488996...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.186460237673657,H1,9.53275578175712,AX,4.25299944917614,L1,0.0466539405263248,L2,10.7308811...
+check iteration duration=3.71932983398e-05
+GetData ===>> H2,-0.259466244924105,H1,9.52500821174696,AX,4.10523394072661,L1,0.0493135369153156,L2,10.6656709...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.115892879000576,H1,9.37647947389444,AX,4.23111934601545,L1,0.032689603471382,L2,10.79745828...
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.14078772888236,H1,9.42350546480142,AX,4.27496736284673,L1,0.039800181193472,L2,10.772447599...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000623941421509
+GetData ===>> H2,-0.10771282336092,H1,9.516561513472,AX,4.18862928022611,L1,0.0319662043042588,L2,10.7748917991...
+check iteration duration=3.40938568115e-05
+GetData ===>> H2,-0.223345696399402,H1,9.46452187405533,AX,4.28176144512657,L1,0.0477528027259442,L2,10.8312813...
+check iteration duration=5.19752502441e-05
+GetData ===>> H2,-0.175981658473324,H1,9.55552695385335,AX,4.27583290076626,L1,0.0629567811333762,L2,10.8018421...
+check iteration duration=6.41345977783e-05
+GetData ===>> H2,-0.182261065171199,H1,9.47010434304227,AX,4.27330744818109,L1,0.066648338185325,L2,10.86977655...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.241800050668273,H1,9.62715523820761,AX,4.3374415311979,L1,0.0192842640870001,L2,10.73189214...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000545024871826
+GetData ===>> H2,-0.15285648211614,H1,9.60719910488626,AX,4.26659693265468,L1,0.0279524018628479,L2,10.80739444...
+check iteration duration=5.19752502441e-05
+GetData ===>> H2,-0.187428537644624,H1,9.66832656755388,AX,4.29409394922232,L1,0.0400166425392637,L2,10.8683436...
+check iteration duration=4.00543212891e-05
+GetData ===>> H2,-0.0227572164082842,H1,9.69614573198066,AX,4.30833752212867,L1,0.00168876985955667,L2,10.84475...
+check iteration duration=4.10079956055e-05
+GetData ===>> H2,-0.0547687428194113,H1,9.66863910147249,AX,4.28699071450264,L1,0.0441278844588148,L2,10.827245...
+check iteration duration=8.39233398438e-05
+GetData ===>> H2,-0.0903877297732365,H1,9.65085115212181,AX,4.27192025502786,L1,0.034307225193519,L2,10.8512231...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000598907470703
+14:22:33 -- collecting point 100
+GetData ===>> H2,-0.133784590442141,H1,9.59326899752548,AX,4.21944639554679,L1,0.0185310886034746,L2,10.6780480...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.261605730546727,H1,9.60022131539258,AX,4.1737158516698,L1,0.0227072967554883,L2,10.79961405...
+check iteration duration=6.50882720947e-05
+GetData ===>> H2,-0.245234319907488,H1,9.6870552432714,AX,4.1765467435449,L1,0.0401248749535476,L2,10.786981223...
+check iteration duration=3.50475311279e-05
+GetData ===>> H2,-0.110699375387397,H1,9.64548910819005,AX,4.23658299453985,L1,0.0788509283977689,L2,10.7876917...
+check iteration duration=4.41074371338e-05
+GetData ===>> H2,-0.127550320007505,H1,9.67839062733817,AX,4.33017587463311,L1,0.0418711850380406,L2,10.6826431...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000647068023682
+GetData ===>> H2,-0.306528659774643,H1,9.70722543900175,AX,4.2057961143447,L1,0.0378907122741354,L2,10.85407633...
+check iteration duration=3.91006469727e-05
+GetData ===>> H2,-0.268806422148989,H1,9.72443506839167,AX,4.20627005104338,L1,0.0374867399776617,L2,10.8618779...
+check iteration duration=3.79085540771e-05
+GetData ===>> H2,-0.230357846380553,H1,9.77649386099466,AX,4.24230770315661,L1,0.0196566682919631,L2,10.8852022...
+check iteration duration=3.2901763916e-05
+GetData ===>> H2,-0.207299181287389,H1,9.71222794732991,AX,4.27795527904516,L1,0.0416029648784696,L2,10.6426797...
+check iteration duration=4.91142272949e-05
+GetData ===>> H2,-0.17310376463672,H1,9.76864773325403,AX,4.32211671309469,L1,0.0470278287886114,L2,10.68812882...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.0014500617981
+GetData ===>> H2,-0.104970134991581,H1,9.76999917756982,AX,4.27058050564503,L1,0.0464844330474137,L2,10.6601745...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.180117038631255,H1,9.70908884548749,AX,4.39912022502912,L1,0.014021621849649,L2,10.70486421...
+check iteration duration=6.29425048828e-05
+GetData ===>> H2,-0.17261272776169,H1,9.75688589696622,AX,4.20866346587748,L1,0.0255215905076836,L2,10.66171395...
+check iteration duration=4.19616699219e-05
+GetData ===>> H2,-0.278818710324181,H1,9.80662761955193,AX,4.24128837274876,L1,0.0547118339651291,L2,10.7220717...
+check iteration duration=4.19616699219e-05
+GetData ===>> H2,-0.247953272533669,H1,9.76684583456098,AX,4.30885939033443,L1,0.0181719386129282,L2,10.7873063...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000581979751587
+GetData ===>> H2,-0.151029127942309,H1,9.82208674310028,AX,4.27832284636388,L1,0.03507165973833,L2,10.666392584...
+len selected runs 1
+cloning run 65447-02. set_labnumber=True, set_position=True
+labnumber changed old:ic-01-J, new:65447
+using cached meta values for 65447
+clear labnumber
+labnumber changed old:65447, new:
+clear labnumber
+clear labnumber
+close session 4419438256
+name=Measurement, new=unknown120_60, suppress=True
+name=Extraction, new=co2, suppress=True
+calculating time of run 65447-02
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=556.052928, duration=0.000121116638184
+script duration name:unknown400_120 seconds:556.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=1.81198120117e-05
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=3.2901763916e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=6.60419464111e-05
+executed snippet estimated_duration=0.0, duration=0.00174593925476
+script duration name:co2 seconds:0.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.0001060962677
+executed snippet estimated_duration=4.0, duration=0.00080680847168
+Script duration 556.0
+Run total estimated duration= 557.000
+unknown400_120 in script context. using previous estimated duration
+script duration name:unknown400_120 seconds:556.0
+pump_ms in script context. using previous estimated duration
+co2 in script context. using previous estimated duration
+script duration name:co2 seconds:0.0
+pump_extraction_line in script context. using previous estimated duration
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=213.652928, duration=0.000114917755127
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+nruns=12 before=0.0, run_dur=6342.0, btw=0.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=213.652928, duration=0.000127077102661
+script duration name:unknown120_60 seconds:214.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=2.19345092773e-05
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.60283660889e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000162124633789
+executed snippet estimated_duration=0.0, duration=0.00237989425659
+script duration name:co2 seconds:0.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000121831893921
+executed snippet estimated_duration=4.0, duration=0.00107884407043
+Script duration 214.0
+Run total estimated duration= 215.000
+run duration: 215.0
+check iteration duration=5.91278076172e-05
+GetData ===>> H2,-0.0216803482476672,H1,9.88740038587122,AX,4.24849502582868,L1,0.00221814311395124,L2,10.70070...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.0646354920145769,H1,9.77205140405701,AX,4.32951215431236,L1,0.0205276673277425,L2,10.753690...
+check iteration duration=3.91006469727e-05
+GetData ===>> H2,-0.121363993966261,H1,9.83276937652657,AX,4.36933135432877,L1,0.0363097819640672,L2,10.7746750...
+check iteration duration=6.69956207275e-05
+GetData ===>> H2,-0.153788899888485,H1,9.79730708494155,AX,4.17262615745337,L1,0.038285081785222,L2,10.69365083...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000914096832275
+GetData ===>> H2,-0.258954239175783,H1,9.85872995241872,AX,4.247131885286,L1,0.0650118507256628,L2,10.647108925...
+check iteration duration=1.71661376953e-05
+waiting for write to finish
+measurement finished
+estimated time: 125.829 actual time: :126.122
+flush and close file /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+baselines () {'settling_time': 15.0, 'detector': 'H1', 'mass': 34.2, 'ncounts': 60}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Baseline
+build tables- baseline [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group baseline table H2
+add group baseline table H1
+add group baseline table AX
+add group baseline table L1
+add group baseline table L2
+add group baseline table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+detector Detector(H1)
+POSITION 34.2 H1
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [-0.00063987  0.15840543  0.57252999]
+H1 map mass to dac 34.2 >> 5.24157599104
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+positioning 34.2 (5.24154512389) on H1
+setting magnet DAC
+current  : 5.880885
+requested: 5.241545
+Delta Dac: 0.639340
+Checking detector protection. dv=0.63934
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+Protected = 2000
+SetMagnetDAC 5.24154512389 ===>> OK
+Magnet settling time: 0.500
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> False
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+Delaying 15.0s for detectors to settle
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+Join finished
+measuring baseline. ncounts=60
+"baseline" increment series count="2" fit count="1" regressing="True"
+starting measurement
+check iteration duration=3.91006469727e-05
+GetData ===>> H2,-0.233521852233656,H1,-0.0196947393330536,AX,-0.0717703563445028,L1,-0.0725164782800706,L2,0.0...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=5.88893890381e-05
+GetData ===>> H2,-0.237536481725371,H1,-0.0105349705971534,AX,-0.0673188387784406,L1,-0.0650183365875712,L2,-0....
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=8.39233398438e-05
+GetData ===>> H2,-0.173226520529322,H1,-0.014816789745775,AX,-0.123307344635318,L1,-0.01983188707899,L2,-0.0200...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=9.51290130615e-05
+GetData ===>> H2,-0.263750554543139,H1,-0.0727405051676786,AX,-0.022896842329235,L1,-0.00312352901800785,L2,0.0...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000877141952515
+GetData ===>> H2,-0.306018665733773,H1,0.037018651959131,AX,-0.12116389446112,L1,-0.0306539894985229,L2,0.04767...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=8.32080841064e-05
+GetData ===>> H2,-0.171633288441854,H1,0.00127378060443841,AX,-0.181151084050246,L1,-0.0141747054184069,L2,-0.0...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=4.00543212891e-05
+GetData ===>> H2,-0.277991518839649,H1,-0.00212585117609336,AX,-0.0881719772233858,L1,-0.059370709784101,L2,-0....
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=3.91006469727e-05
+GetData ===>> H2,-0.253590893192574,H1,-0.100140641615431,AX,-0.0799773080065562,L1,-0.0352799514434862,L2,-0.0...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=4.10079956055e-05
+GetData ===>> H2,-0.213612988233971,H1,-0.087234074105935,AX,-0.0635279327984316,L1,-0.0223566076508651,L2,-0.0...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000600099563599
+GetData ===>> H2,-0.144267410539007,H1,-0.0658267146599332,AX,-0.157167964979003,L1,-0.00905832953124627,L2,0.1...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=6.8187713623e-05
+GetData ===>> H2,-0.187296379020005,H1,6.89856071601991E-05,AX,-0.17935458358408,L1,-0.0512706361529642,L2,-0.1...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=9.98973846436e-05
+GetData ===>> H2,-0.188662393205153,H1,-0.025085253066348,AX,-0.0204264259614203,L1,-0.0102741239576565,L2,0.01...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=4.19616699219e-05
+GetData ===>> H2,-0.319591392587604,H1,-0.00238827409220193,AX,-0.102890512593505,L1,-0.0480517955250185,L2,0.0...
+check iteration duration=3.48091125488e-05
+GetData ===>> H2,-0.207320740711702,H1,-0.0336474634454963,AX,-0.00713381368433296,L1,-0.0558795793574066,L2,0....
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000741958618164
+GetData ===>> H2,-0.168130357894834,H1,-0.0379879142653693,AX,-0.106517652155125,L1,-0.0690060082831335,L2,-0.0...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.131352760348594,H1,-0.085076858424382,AX,-0.131984938626917,L1,-0.0177850317428206,L2,-0.03...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=4.41074371338e-05
+GetData ===>> H2,-0.215096968722837,H1,0.0758914739530382,AX,-0.0178631577199419,L1,-0.0370377166527539,L2,-0.0...
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 493, in data
+    return adapter.get_text(obj, name, row, column)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 323, in get_text
+    return self._result_for( 'get_text', object, trait, row, column )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 531, in _result_for
+    return handler()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/tabular_adapter.py", line 582, in <lambda>
+    return lambda: getattr( self, name )
+File "/Users/jan/Programming/git/pychron_dev/pychron/processing/analyses/view/adapters.py", line 154, in _get_percent_error_text
+    return format_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 33, in format_percent_error
+    p = calc_percent_error(v, e)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/helpers/formatting.py", line 45, in calc_percent_error
+    return abs(e / v * scale)
+TypeError: unsupported operand type(s) for /: 'float' and 'NoneType'
+============ End Exception ==========
+check iteration duration=7.31945037842e-05
+GetData ===>> H2,-0.242888848630612,H1,-0.0428766581766603,AX,-0.0156477900604621,L1,-0.04458889471592,L2,0.038...
+check iteration duration=3.79085540771e-05
+GetData ===>> H2,-0.25177968420963,H1,-0.118311886978106,AX,-0.111743740052758,L1,-0.00367901545301405,L2,-0.01...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000515222549438
+GetData ===>> H2,-0.101919520271532,H1,-0.0692359883002201,AX,-0.0185590743255829,L1,-0.00877654161638613,L2,-0...
+check iteration duration=5.3882598877e-05
+GetData ===>> H2,-0.184327797653268,H1,-0.0991158042179528,AX,-0.0847296047741098,L1,-0.0188630701434449,L2,0.0...
+check iteration duration=4.98294830322e-05
+GetData ===>> H2,-0.27777799689681,H1,-0.00366459391958323,AX,-0.0889253421553019,L1,0.00510797922256287,L2,-0....
+check iteration duration=4.19616699219e-05
+GetData ===>> H2,-0.211180562667524,H1,0.00192986318643409,AX,-0.0411040803570756,L1,-0.0147517545747893,L2,0.0...
+check iteration duration=4.00543212891e-05
+GetData ===>> H2,-0.127200189606118,H1,0.0193235840427298,AX,-0.0255875531341336,L1,-0.0291148481319263,L2,-0.0...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000615119934082
+14:23:40 -- collecting point 25
+GetData ===>> H2,-0.141706738846882,H1,-0.00278190717641886,AX,0.00228578537976371,L1,-0.0071971841978731,L2,0....
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.183155526385234,H1,-0.105264671142513,AX,-0.0370106478619727,L1,-0.0183198683462282,L2,-0.0...
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.156750506746427,H1,0.0229387078255485,AX,-0.0469366343086272,L1,-0.0241700352995851,L2,-0.0...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.177497510010138,H1,-0.00748152806948605,AX,0.00588217817328867,L1,0.00128545653207806,L2,0....
+check iteration duration=3.48091125488e-05
+GetData ===>> H2,-0.231758946808002,H1,-0.0523434490897532,AX,-0.15889531811642,L1,-0.04528085209652,L2,0.08806...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000577926635742
+GetData ===>> H2,-0.243194339209883,H1,-0.023928463744549,AX,-0.0382282590871833,L1,-0.0387580398812814,L2,-0.0...
+check iteration duration=6.60419464111e-05
+GetData ===>> H2,-0.211334119954577,H1,-0.0805119890334492,AX,-0.0739612628651221,L1,-0.026666109748964,L2,0.04...
+check iteration duration=5.19752502441e-05
+GetData ===>> H2,-0.264018124664334,H1,0.0118074079203058,AX,-0.134614710794382,L1,-0.0347574752615684,L2,-0.01...
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.241337044195952,H1,-0.0237853548578969,AX,-0.101152218864503,L1,-0.0523042754461214,L2,-0.0...
+check iteration duration=4.19616699219e-05
+GetData ===>> H2,-0.159212969178136,H1,-0.0724544267587611,AX,-0.0677941407296626,L1,-0.0271309846096395,L2,-0....
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.0138440132141
+GetData ===>> H2,-0.173959307321579,H1,-0.0636094324042212,AX,-0.157330267921882,L1,-0.0161527649008423,L2,-0.0...
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.214931343533882,H1,-0.0330989315376893,AX,-0.116876852422164,L1,-0.040407404797067,L2,-0.07...
+check iteration duration=5.69820404053e-05
+GetData ===>> H2,-0.228272698027034,H1,-0.0517950196454951,AX,-0.0769171696763589,L1,-0.0412601293049004,L2,-0....
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.214901719260538,H1,-0.0315964156987423,AX,-0.0130263998446765,L1,-0.045727366769666,L2,0.03...
+check iteration duration=6.41345977783e-05
+GetData ===>> H2,-0.153163242515,H1,-0.134284897082781,AX,0.0356445271092413,L1,0.00397091526984999,L2,0.007488...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00180816650391
+GetData ===>> H2,-0.24307456635542,H1,0.047090606444722,AX,-0.125566605854777,L1,-0.0309366388826512,L2,-0.0297...
+check iteration duration=3.79085540771e-05
+GetData ===>> H2,-0.240876710802076,H1,0.0391785473756069,AX,-0.0255875531341336,L1,-0.0185009388706592,L2,0.00...
+check iteration duration=3.79085540771e-05
+GetData ===>> H2,-0.194316180990299,H1,-0.0111790442341995,AX,-0.0570934882577881,L1,0.000625305882198826,L2,-0...
+check iteration duration=3.81469726562e-05
+GetData ===>> H2,-0.156990968227902,H1,-0.0124791061722139,AX,-0.0392487215230985,L1,-0.0203462334030417,L2,-0....
+check iteration duration=3.60012054443e-05
+GetData ===>> H2,-0.0863982796134808,H1,-0.052665351928982,AX,0.00443200380201068,L1,-0.037745768342902,L2,-0.0...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000720024108887
+GetData ===>> H2,-0.163017049878756,H1,-0.0531064763603204,AX,-0.0393298942119735,L1,-0.0410373739854332,L2,-0....
+check iteration duration=4.79221343994e-05
+GetData ===>> H2,-0.214047968211768,H1,-0.0755416463762647,AX,-0.132355659713004,L1,-0.0516786014043138,L2,-0.0...
+check iteration duration=5.19752502441e-05
+GetData ===>> H2,-0.213059475583227,H1,-0.0135644660497423,AX,-0.0382630477554937,L1,-0.0264851861463486,L2,0.0...
+check iteration duration=8.20159912109e-05
+GetData ===>> H2,-0.231185606830462,H1,-0.0321926548423111,AX,-0.104964835797955,L1,0.0136242130145823,L2,0.052...
+check iteration duration=3.69548797607e-05
+GetData ===>> H2,-0.223650077418082,H1,-0.10098672039327,AX,-0.0780299583864739,L1,0.022334779838723,L2,-0.0818...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000693082809448
+14:24:06 -- collecting point 50
+GetData ===>> H2,-0.236590804394671,H1,-0.0811317746416183,AX,-0.0594470371427148,L1,-0.0135215173543467,L2,-0....
+check iteration duration=3.981590271e-05
+GetData ===>> H2,-0.219053859553961,H1,-0.0807265306399739,AX,-0.184732395633503,L1,-0.029955715646939,L2,0.052...
+check iteration duration=8.58306884766e-05
+GetData ===>> H2,-0.237333362830768,H1,-0.0520453899820026,AX,-0.0765114622934517,L1,-0.0234113839326259,L2,-0....
+check iteration duration=7.41481781006e-05
+GetData ===>> H2,-0.262658695098821,H1,-0.0509485248210815,AX,-0.0548558249551486,L1,-0.0257746401100639,L2,-0....
+check iteration duration=4.10079956055e-05
+GetData ===>> H2,-0.253026182154523,H1,-0.0264686124328282,AX,-0.0494179727400186,L1,-0.0118997497470678,L2,0.0...
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.00182008743286
+GetData ===>> H2,-0.245749639300453,H1,-0.00783935818395849,AX,-0.0703560941900291,L1,-0.0151500068051781,L2,0....
+check iteration duration=3.38554382324e-05
+GetData ===>> H2,-0.244535977505105,H1,-0.0346729715567705,AX,-0.0601774372917061,L1,-0.0682133829265315,L2,-0....
+check iteration duration=7.20024108887e-05
+GetData ===>> H2,-0.22750127061983,H1,-0.0324669236555718,AX,-0.0276055374222813,L1,-0.0161479672531316,L2,-0.0...
+check iteration duration=4.00543212891e-05
+GetData ===>> H2,-0.26685881701486,H1,-0.0489932136298997,AX,-0.106367006877694,L1,-0.00358303726562111,L2,-0.0...
+check iteration duration=6.60419464111e-05
+GetData ===>> H2,-0.273129199386166,H1,-0.00933030322507451,AX,-0.111118014832956,L1,-0.0497247641012019,L2,-0....
+testing H1>-5.0
+evaluate ot="H1.bs>-5.0" t="H1>-5.0", ctx="{'H1': None}"
+check iteration duration=0.000645875930786
+GetData ===>> H2,-0.155400855790039,H1,0.027222142270378,AX,-0.0653944217832726,L1,-0.0128527047293397,L2,-0.02...
+check iteration duration=1.50203704834e-05
+waiting for write to finish
+measurement finished
+estimated time: 62.915 actual time: :64.306
+flush and close file /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+activate_detectors ('H1', 'AX', 'CDD') {'peak_center': True}
+peak_center () {'detector': 'H1', 'integration_time': 0.262144, 'isotope': 'Ar40'}
+peak center: mean=9.80097931435 threshold=3
+peak center started
+setup peak center. detector=['H1', 'AX', 'CDD'], isotope=Ar40
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x1a439a230>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x12e273d10>]
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x1a439a230>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x12e273d10>]
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x14b919cb0>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x12e273d10>]
+setting integration time = 0.524288
+SetIntegrationTime 0.524288 ===>> OK
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [-0.00063987  0.15840543  0.57252999]
+H1 map mass to dac 39.9624 >> 5.88092
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+do peak center. <pychron.spectrometer.jobs.peak_center.PeakCenter object at 0x16275af50>
+doing pc
+starting peak center. center dac= 5.88088536781 step_width=0.001
+width = 0.001
+get scan parameters. half-width=0.015,window=0.015, i=0, scalar=1
+Scan parameters center=5.88089 width=0.03000 (5.86589 - 5.89589)
+GetData ===>> H2,-0.152752424941245,H1,0.00775129335102172,AX,-0.142211745775861,L1,-0.00155168429743146,L2,-0....
+Moving to starting dac 5.86588536781
+setting magnet DAC
+current  : 5.241545
+requested: 5.865885
+Delta Dac: 0.624340
+Checking detector protection. dv=0.62434
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+Protected = 2000
+SetMagnetDAC 5.86588536781 ===>> OK
+Magnet settling time: 0.500
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> False
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+Wait until signal near baseline. tol= 0.00581347001327. timeout= 10
+GetData ===>> H2,0.439573114193904,H1,0.754486144459876,AX,0.176659042197778,L1,0.149922829610922,L2,0.12328442...
+GetData ===>> H2,0.437466526242052,H1,0.491423845197248,AX,-0.123967749495908,L1,0.236353002416878,L2,0.0332096...
+GetData ===>> H2,0.116239676677799,H1,0.137832047578379,AX,-0.0190346144776433,L1,0.190112806965545,L2,0.143307...
+GetData ===>> H2,-0.0544221876887604,H1,0.0198127515708581,AX,0.0100588010722995,L1,0.120867585253394,L2,0.0032...
+GetData ===>> H2,-0.149480192352107,H1,0.0163528374649726,AX,0.0425265524022948,L1,0.0625479931964879,L2,-0.117...
+GetData ===>> H2,-0.255075141754421,H1,-0.0194562143190023,AX,-0.00233132411954297,L1,0.0361859629032964,L2,0.1...
+Peak center baseline intensity achieved
+_do_sweep sm= 5.86588536781, em= 5.89588536781, stm= 0.001
+calculated step values: start=5.86588536781, end=5.89588536781, width=0.001, nsteps=31.0
+setting magnet DAC
+current  : 5.865885
+requested: 5.865885
+Delta Dac: 0.000000
+Checking detector protection. dv=0.00000
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86588536781 ===>> OK
+GetData ===>> H2,-0.255075141754421,H1,-0.0194562143190023,AX,-0.00233132411954297,L1,0.0361859629032964,L2,0.1...
+setting magnet DAC
+current  : 5.865885
+requested: 5.866920
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86691985057 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.29318108259683,H1,0.0495252119516067,AX,0.0437799921761524,L1,-0.00133328645641565,L2,-0.00...
+setting magnet DAC
+current  : 5.866920
+requested: 5.867954
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86795433333 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.25775006059581,H1,0.021125164065139,AX,-0.0999817502564137,L1,-0.00438082814253219,L2,0.079...
+setting magnet DAC
+current  : 5.867954
+requested: 5.868989
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86898881609 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.215364926288543,H1,0.165662572653669,AX,-0.00383937776399647,L1,-0.00963387182493565,L2,0.0...
+setting magnet DAC
+current  : 5.868989
+requested: 5.870023
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87002329885 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.225362339151715,H1,0.662455550665553,AX,0.134236245077209,L1,-6.36051962802058E-05,L2,-0.05...
+setting magnet DAC
+current  : 5.870023
+requested: 5.871058
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87105778161 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.166632241078398,H1,2.13066059674689,AX,0.399815898623911,L1,-0.0370293299548323,L2,0.143535...
+setting magnet DAC
+current  : 5.871058
+requested: 5.872092
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87209226437 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.0991677041405536,H1,4.51494837273418,AX,1.36467762444526,L1,-0.0719745715897319,L2,0.729714...
+setting magnet DAC
+current  : 5.872092
+requested: 5.873127
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87312674712 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.0847690957157526,H1,7.1427786576532,AX,2.43041654955222,L1,0.017932680066442,L2,2.177441298...
+setting magnet DAC
+current  : 5.873127
+requested: 5.874161
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87416122988 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.171598210531703,H1,9.05750035912536,AX,3.20437713329153,L1,0.035479141442497,L2,4.468031571...
+setting magnet DAC
+current  : 5.874161
+requested: 5.875196
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87519571264 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.121478961914688,H1,10.1123788908951,AX,3.75195594066407,L1,0.0574200922431461,L2,7.00572144...
+setting magnet DAC
+current  : 5.875196
+requested: 5.876230
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.8762301954 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.168133057025628,H1,10.5762201163129,AX,4.00575347858905,L1,0.0266648635696987,L2,9.36910135...
+setting magnet DAC
+current  : 5.876230
+requested: 5.877265
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87726467816 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.180496422171496,H1,10.7416693119804,AX,4.26560240854559,L1,-0.00616093355210033,L2,10.08518...
+setting magnet DAC
+current  : 5.877265
+requested: 5.878299
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87829916092 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.137768286751761,H1,10.6600303349608,AX,4.1898264948056,L1,0.0655942173521579,L2,10.12867957...
+setting magnet DAC
+current  : 5.878299
+requested: 5.879334
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87933364368 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.133248221383032,H1,10.6371435570285,AX,4.1185394967252,L1,0.031493980013515,L2,10.300671353...
+setting magnet DAC
+current  : 5.879334
+requested: 5.880368
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88036812643 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.147755754079422,H1,10.7267091666822,AX,4.11256777132091,L1,0.0214899457380177,L2,10.2548677...
+setting magnet DAC
+current  : 5.880368
+requested: 5.881403
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88140260919 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.209848298326384,H1,10.718739669946,AX,4.1680516019088,L1,0.0334142563127683,L2,10.138268257...
+setting magnet DAC
+current  : 5.881403
+requested: 5.882437
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88243709195 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.0591597312726726,H1,10.6999119264043,AX,3.99410795394711,L1,0.0651201394997589,L2,10.069131...
+setting magnet DAC
+current  : 5.882437
+requested: 5.883472
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88347157471 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.312754554568994,H1,10.7413424289867,AX,4.06930717555785,L1,0.0594810415799995,L2,10.0157943...
+setting magnet DAC
+current  : 5.883472
+requested: 5.884506
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88450605747 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.352205211109736,H1,10.8052672761158,AX,4.2190644204959,L1,0.0331138134936543,L2,10.02248696...
+setting magnet DAC
+current  : 5.884506
+requested: 5.885541
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88554054023 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.0803611390546587,H1,10.6818665905255,AX,3.99472333368599,L1,0.020570505094886,L2,9.72795996...
+setting magnet DAC
+current  : 5.885541
+requested: 5.886575
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88657502299 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.159789672684559,H1,10.4664660319372,AX,3.87957173524621,L1,0.00639820929861017,L2,9.0310140...
+setting magnet DAC
+current  : 5.886575
+requested: 5.887610
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88760950574 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.183130289214392,H1,9.8335324633555,AX,3.49466590866202,L1,0.00209209933904083,L2,7.62421297...
+setting magnet DAC
+current  : 5.887610
+requested: 5.888644
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.8886439885 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.200934659755198,H1,8.32617596778709,AX,2.57118538513252,L1,0.0289998490490317,L2,5.09515440...
+setting magnet DAC
+current  : 5.888644
+requested: 5.889678
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88967847126 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.185946797512852,H1,5.83109865202685,AX,1.58346830072745,L1,0.0271332586628441,L2,2.74470580...
+setting magnet DAC
+current  : 5.889678
+requested: 5.890713
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89071295402 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.189931835303162,H1,3.12347255739953,AX,0.837938986826148,L1,0.00914571223229366,L2,1.158429...
+setting magnet DAC
+current  : 5.890713
+requested: 5.891747
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89174743678 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.170321840378392,H1,1.28569514647767,AX,0.184663226693874,L1,6.84124401989821E-05,L2,0.41812...
+setting magnet DAC
+current  : 5.891747
+requested: 5.892782
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89278191954 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.229991961420148,H1,0.378163696901513,AX,0.00980355786521959,L1,-0.0559678135072433,L2,0.082...
+setting magnet DAC
+current  : 5.892782
+requested: 5.893816
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.8938164023 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.185076315221861,H1,0.0851016537324114,AX,-0.169883857583033,L1,-0.04892421518794,L2,-0.1897...
+setting magnet DAC
+current  : 5.893816
+requested: 5.894851
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89485088505 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.266923305992265,H1,0.0110558213450187,AX,-0.0316761715015336,L1,-0.00550842471459317,L2,-0....
+setting magnet DAC
+current  : 5.894851
+requested: 5.895885
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89588536781 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.267124743490038,H1,-0.00123122242798852,AX,0.0231699204208185,L1,-0.0115616987510641,L2,-0....
+result of _do_sweep=True
+result of _calculate_peak_center=([5.8736108187153864, 5.8812160291362279, 5.8888212395570694], [8.0387456261778389, 10.803288908410948, 7.8986627202980202], 5.8845226423626809, 10.803288908410948)
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0385887542515
+new center pos Detector(H1) (Ar40) @ 5.88121602914
+GetHighVoltage ===>> 4499.94659342336
+GetDeflection H1 ===>> 0
+dac uncorrected for HV and deflection 5.88125066327
+update mftable H1 Ar40 5.88125066327 message=automated run peakcenter
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+dump mftable to /Users/jan/PychronDev/setupfiles/spectrometer/mftables/mftable.csv
+add to repo msg=modified - automated run peakcenter
+locally archiving mftable
+setting magnet DAC
+current  : 5.895885
+requested: 5.881216
+Delta Dac: 0.014669
+Checking detector protection. dv=0.01467
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88121602914 ===>> OK
+Magnet settling time: 0.500
+sweep finished
+setting integration time = 1.048576
+SetIntegrationTime 1.048576 ===>> OK
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0385887542515
+flush and close file /Users/jan/PychronDev/data/isotopes/a8/3f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab.h5
+finished measure script
+executed snippet estimated_duration=226.132928, duration=267.025883198
+jan_unknown120_60.py completed successfully
+Measurement Finished
+14:24:57 -- ******* Measurement Finished *******
+Post Measurement Started jan_pump_ms.py
+14:24:57 -- ******* Post Measurement Started jan_pump_ms.py *******
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=3.00407409668e-05
+Pumping spectrometer
+open () {'name': 'O'}
+opening name=O desc=---
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+Open O ===>> OK
+set states for children of O. state=True
+handle state [('O', True)]
+update switch state O True args=() kw={'refresh': False} ncanvase=6
+refresh_canvas_needed fired
+GetIndicatorState O ===>> OK
+change switch state (True, True)
+update switch state O True args=() kw={} ncanvase=6
+14:24:57 -- OPEN   VALVE-O (Jan Ion Pump)
+---------------------------------------- open O () result=[(True, True)], time=0.10 sec
+action=open, ok=True, locked=[False]
+executed snippet estimated_duration=0, duration=0.347683906555
+jan_pump_ms.py completed successfully
+setting _ms_pumptime
+Post Measurement Finished
+14:24:57 -- ******* Post Measurement Finished *******
+$$$$$$$$$$$$$$$$$$$$ state at run end measurement
+state changed from measurement to success
+post measurement save measured=True aborted=False
+Set filtering
+setting fod for Ar40= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for H1= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for PM41= {'filter_outliers': False, 'std_devs': 2, 'iterations': 1}
+setting fod for H2= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar36= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for CDD= {'filter_outliers': True, 'std_devs': 10, 'iterations': 1}
+setting fod for Ar37= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for L2= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar38= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for L1= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar39= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for AX= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+persistence save...
+persistence save - db
+post measurement save
+5105852880 connecting to database sqlite:////Users/jan/PychronDev/.appdata/local_lab.db
+connected to db sqlite:////Users/jan/PychronDev/.appdata/local_lab.db
+create new session 5105852880
+close session 5105852880
+No database instance. Not saving post measurement to isotopedb database
+$$$$$$$$$$$$$$$ auto_save_detector_ic=False
+massspec enabled True
+create new session 4997822608
+MassSpec Database Version: 16.0
+close session 4997822608
+saving post measurement to secondary database
+saving to massspec database 129.138.12.160/massspecdata
+setting labnumber to 65447
+setting aliquot to 2
+setting step to B
+setting uuid to a83f9c67-ff4a-43e7-b8f1-0ddfa4cbd0ab
+setting irradpos to 65447
+setting extract_device to Fusions CO2
+setting tray to 
+setting position to 129
+setting power_requested to 0.4
+setting extract_value to 0.4
+setting duration to 30.0
+setting duration_at_request to 30.0
+setting first_stage_delay to 30.0
+setting cleanup to 30.0
+setting comment to J:1 10 crystals
+setting irradiation to NM-288
+setting level to J
+setting irradiation_level to J
+setting sample to MB.56.1
+setting material to Plagioclase
+setting project to IR973
+setting mass_spectrometer to Jan
+no attribute chron_dosages
+no attribute production_ratios
+no attribute interference_corrections
+no attribute production_name
+no attribute j
+Reference Isotope=Ar40
+Reference Detector=H1
+%%%%%%%%%%%%%%%%%%%% Comment: J:1 10 crystals %%%%%%%%%%%%%%%%%%%
+adding isotope PM41 H2
+add baseline dbdet= PM41. original det= H2
+get baseline data PM41 H2
+Get data baseline <pychron.processing.isotope.Baseline object at 0x19e628c90> len t=60
+baseline PM41. v=-0.213428355407, e=0.00558775516323
+get signal data PM41 H2
+Get data signal PM41 0.04+/-0.07 len t=120
+adding isotope Ar40 H1
+add baseline dbdet= Ar40. original det= H1
+get baseline data Ar40 H1
+Get data baseline <pychron.processing.isotope.Baseline object at 0x19e628e90> len t=60
+baseline Ar40. v=-0.0346145407299, e=0.00518273164252
+get signal data Ar40 H1
+Get data signal Ar40 8.175+/-0.012 len t=120
+adding isotope Ar39 AX
+add baseline dbdet= Ar39. original det= AX
+get baseline data Ar39 AX
+Get data baseline <pychron.processing.isotope.Baseline object at 0x19e630090> len t=60
+baseline Ar39. v=-0.0696473327582, e=0.0058729025302
+get signal data Ar39 AX
+Get data signal Ar39 4.361+/-0.011 len t=120
+adding isotope Ar38 L1
+add baseline dbdet= Ar38. original det= L1
+get baseline data Ar38 L1
+Get data baseline <pychron.processing.isotope.Baseline object at 0x19e630250> len t=60
+baseline Ar38. v=-0.0261302681699, e=0.00249128747501
+get signal data Ar38 L1
+Get data signal Ar38 0.074+/-0.004 len t=120
+adding isotope Ar37 L2
+add baseline dbdet= Ar37. original det= L2
+get baseline data Ar37 L2
+Get data baseline <pychron.processing.isotope.Baseline object at 0x19e630410> len t=60
+baseline Ar37. v=-0.0144701193283, e=0.00561049811455
+get signal data Ar37 L2
+Get data signal Ar37 11.246+/-0.013 len t=120
+adding isotope Ar36 CDD
+add baseline dbdet= Ar36. original det= CDD
+get baseline data Ar36 CDD
+Get data baseline <pychron.processing.isotope.Baseline object at 0x19e6305d0> len t=60
+baseline Ar36. v=3.4735262661e-05, e=8.92818592425e-06
+get signal data Ar36 CDD
+Get data signal Ar36 0.0300+/-0.0004 len t=120
+65447-02B added analysis time 0.654260158539s
+analysis added to mass spec database
+mass spec save time= 0.671
+persistence save - dvc
+================= post measurement started
+create new session 4992585168
+close session 4992585168
+---------------- Experiment Queue saving disabled
+DVC saving peakcenter
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0385887542515
+Smart pull ahead: 0 behind: 0
+Up-to-date with origin
+add to repo msg=modified - ad8224ebc6dbfeb9f5997218dfa5fe690569839d.json
+add to repo msg=modified - 47-02B.json
+add to repo msg=modified - 47-02B.dat.json
+add to repo msg=modified - 47-02B.blan.json
+add to repo msg=modified - 47-02B.inte.json
+add to repo msg=modified - 47-02B.icfa.json
+add to repo msg=modified - 47-02B.base.json
+not at valid file /Users/jan/PychronDev/data/.dvc/repositories/Load1794/654/tags/47-02B.tags.json
+add to repo msg=modified - 47-02B.peak.json
+add to repo msg=modified - 47-02B.extr.json
+not at valid file /Users/jan/PychronDev/data/.dvc/repositories/Load1794/654/monitor/47-02B.moni.json
+commit message=<COLLECTION>
+add to repo msg=modified - 47-02B.inte.json
+add to repo msg=modified - 47-02B.base.json
+commit message=<ISOEVO> default collection fits
+add to repo msg=modified - 47-02B.blan.json
+commit message=<BLANKS> preceding bu-FC-J-7801
+add to repo msg=modified - 47-02B.icfa.json
+commit message=<ICFactor> default
+push repository <pychron.git_archive.repo_manager.GitRepoManager object at 0x12b5188f0>
+pushing to remote=origin, url=https://github.com
+no changes to meta repo
+create new session 4992585168
+add association Load1794
+get identifier "65447"
+setting analysis irradiation position=<pychron.dvc.dvc_orm.IrradiationPositionTbl object at 0x13625de50>
+close session 4992585168
+================= post measurement finished
+14:25:09 -- ******* Post Run Check *******
+loading queue conditionals post_run_actions
+loading system conditionals post_run_actions
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+loading queue conditionals post_run_terminations
+loading system conditionals post_run_terminations
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+Checking default post run terminations n=1
+GetDeflection CDD ===>> 50
+testing CDD==2000
+evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
+14:25:10 -- ******* Post Run Check Passed *******
+14:25:10 -- Automated run 65447-02B success duration: 356.107 s
+----------------- finish -----------------
+----------------- stop -----------------
+retroactive repository identifiers disabled
+finish run. runs completed=1
+update duration runid=65447-02B, duration=356.107324123, md5=301e91d8
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=213.652928, duration=0.000316858291626
+script duration name:unknown120_60 seconds:214.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=2.69412994385e-05
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.69820404053e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000136852264404
+executed snippet estimated_duration=0.0, duration=0.00289511680603
+script duration name:co2 seconds:0.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000180006027222
+executed snippet estimated_duration=4.0, duration=0.00170397758484
+Script duration 214.0
+Run total estimated duration= 215.000
+unknown120_60 in script context. using previous estimated duration
+script duration name:unknown120_60 seconds:214.0
+pump_ms in script context. using previous estimated duration
+co2 in script context. using previous estimated duration
+script duration name:co2 seconds:0.0
+pump_extraction_line in script context. using previous estimated duration
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=556.052928, duration=0.000232934951782
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+unknown400_120 in script context. using previous estimated duration
+script duration name:unknown400_120 seconds:556.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_sniffair_x2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=4.50611114502e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000102043151855
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=32.0, duration=9.10758972168e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=9.70363616943e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=5.98430633545e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=36.0, duration=8.70227813721e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=9.29832458496e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000117063522339
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=36.0, duration=8.70227813721e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=70.0, duration=9.51290130615e-05
+executed snippet estimated_duration=250.0, duration=0.0149610042572
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+sniffair_x2 in script context. using previous estimated duration
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown120_60 seconds:214.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_cocktail_x1.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=7.10487365723e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000184059143066
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=32.0, duration=9.29832458496e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=9.89437103271e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=5.98430633545e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=38.0, duration=9.89437103271e-05
+executed snippet estimated_duration=108.0, duration=0.015585899353
+script duration name:cocktail_x1 seconds:108.0
+Script duration 322.0
+Run total estimated duration= 323.000
+script duration name:unknown120_60 seconds:214.0
+cocktail_x1 in script context. using previous estimated duration
+script duration name:cocktail_x1 seconds:108.0
+Script duration 322.0
+Run total estimated duration= 323.000
+loading script "jan_ic_peak_hop3.py"
+loading script "jan_pump_ms.py"
+loading script "jan_air_x1.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=133.8, duration=0.00904202461243
+script duration name:ic_peak_hop3 seconds:134.0
+loading script "jan_ic_peak_hop3.py"
+loading script "jan_pump_ms.py"
+loading script "jan_air_x1.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.91278076172e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=0.000112056732178
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=32.0, duration=0.000118970870972
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=34.0, duration=0.000108957290649
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=6.31809234619e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=36.0, duration=8.9168548584e-05
+executed snippet estimated_duration=106.0, duration=0.00738000869751
+script duration name:air_x1 seconds:106.0
+Script duration 240.0
+Run total estimated duration= 241.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+script duration name:unknown120_60 seconds:214.0
+script duration name:co2 seconds:0.0
+Script duration 214.0
+Run total estimated duration= 215.000
+nruns=43 before=0.0, run_dur=11013.0, btw=0.0
+write rem/ex queues
+/Users/jan/PychronDev/experiments/rem/Load1794.rem.txt
+/Users/jan/PychronDev/experiments/rem/Load1794.ex.txt
+doing event level: 3
